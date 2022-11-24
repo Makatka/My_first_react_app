@@ -13,7 +13,7 @@ const SearchForm = () => {
   const handleSearch = e => {
     e.preventDefault();
     dispatch(searching(searchTitle));
-    setSearchTitle('');
+    
   }
 
 

@@ -1,16 +1,26 @@
-import Hero from './components/Hero/Hero.js'
-import SearchForm from './components/SearchForm/SearchForm.js'
-import List from "./components/List/List.js";
-import Container from "./components/Container/Container.js";
+import Container from './components/Container/Container.js';
+import NavBar from './components/NavBar/NavBar.js';
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Favorite from "./components/Favorite/Favorite";
+import { Routes, Route } from 'react-router-dom';
+import WrongAddress from "./components/WrongAddress/WrongAddress";
+
 
 
 const App = () => {
   return (
+    <main>
+      <NavBar/>
       <Container>
-        <Hero />
-        <SearchForm />
-        <List />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="*" element={<WrongAddress />} />
+        </Routes>
       </Container>
+    </main>
   );
 };
 

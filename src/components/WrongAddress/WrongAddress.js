@@ -1,14 +1,14 @@
 import PageTitle from "../PageTitle/PageTitle";
 import Container from "../Container/Container";
 import Img from '../../assets/5203299.jpg';
-import './WrongAddress.modules.scss';
+import styles from './WrongAddress.module.scss';
 
 const WrongAddress = () => {
 
   return (
     <Container>
       <PageTitle>Address not found...</PageTitle>
-      <img src={Img} alt="§"/>
+      <img className={styles.mainImg} src={Img} alt="§"/>
     </Container>
   )
 }

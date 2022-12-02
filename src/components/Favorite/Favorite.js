@@ -1,5 +1,4 @@
-import NavBar from "../NavBar/NavBar";
-import './Favorite.modules.scss'
+import './Favorite.module.scss'
 import PageTitle from "../PageTitle/PageTitle";
 import Container from "../Container/Container";
 

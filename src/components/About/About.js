@@ -1,5 +1,3 @@
-import NavBar from "../NavBar/NavBar";
-import './About.modules.scss'
 import PageTitle from "../PageTitle/PageTitle";
 
 

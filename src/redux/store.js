@@ -6,6 +6,10 @@ import strContains from "../utils/strContains";
 export const getFilteredCards = ({cards, searchTitle}, columnId) =>
   cards.filter(card => card.columnId === columnId && strContains(card.title, searchTitle));
 
+export const getFavoriteCards = ({cards}) =>
+  cards.filter(card => card.isFavorite);
+
+
 export const getAllColumns = (state) => state.columns;
 
 export const getListById = ({lists}, listId) => lists.find(list => list.id === listId);
@@ -18,9 +22,12 @@ export const addColumn = payload => ({type: 'ADD_COLUMN', payload});
 
 export const addCard = payload => ({type: 'ADD_CARD', payload});
 
-export const addList = payload => ({type: 'ADD_LIST', payload})
+export const addList = payload => ({type: 'ADD_LIST', payload});
 
-export const searching = payload => ({type: 'UPDATE_SEARCHSTRING', payload})
+export const searching = payload => ({type: 'UPDATE_SEARCHSTRING', payload});
+
+export const toggleFavorite = payload => ({type: 'TOGGLE_CARD_FAVORITE', payload})
+
 
 
 const reducer = (state, action) => {
@@ -33,6 +40,8 @@ const reducer = (state, action) => {
       return {...state, lists: [...state.lists, {...action.payload, id: shortid()}]};
     case 'UPDATE_SEARCHSTRING':
       return {...state, searchTitle: action.payload};
+    case 'TOGGLE_CARD_FAVORITE':
+      return { ...state, cards: state.cards.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card) };
 
     default:
       return state;

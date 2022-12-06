@@ -11,6 +11,10 @@ const CardForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    if (!title.trim()){
+      return
+    }
       dispatch(addCard({title, columnId: props.columnId}));
     setTitle('')
   };

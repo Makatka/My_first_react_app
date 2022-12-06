@@ -27,16 +27,16 @@ const initialState = {
   ],
 
   cards: [
-    {id: '1', columnId: '1', title: 'This is Going to Hurt'},
-    {id: '2', columnId: '1', title: 'Interpreter of Maladies'},
-    {id: '3', columnId: '2', title: 'Harry Potter'},
-    {id: '4', columnId: '2', title: 'Star Wars'},
-    {id: '5', columnId: '3', title: 'The Witcher'},
-    {id: '6', columnId: '4', title: 'Dr House'},
-    {id: '6', columnId: '4', title: 'Succession'},
-    {id: '6', columnId: '4', title: 'The Office'},
-    {id: '6', columnId: '4', title: 'Lost'},
-    {id: '6', columnId: '4', title: 'Keeping Up Appearances'}
+    {id: '1', columnId: '1', title: 'This is Going to Hurt', isFavorite: true},
+    {id: '2', columnId: '1', title: 'Interpreter of Maladies', isFavorite: true},
+    {id: '3', columnId: '2', title: 'Harry Potter', isFavorite: true},
+    {id: '4', columnId: '2', title: 'Star Wars', isFavorite: false},
+    {id: '5', columnId: '3', title: 'The Witcher', isFavorite: false},
+    {id: '6', columnId: '4', title: 'Dr House', isFavorite: true},
+    {id: '7', columnId: '4', title: 'Succession', isFavorite: false},
+    {id: '8', columnId: '4', title: 'The Office', isFavorite: false},
+    {id: '9', columnId: '4', title: 'Lost', isFavorite: false},
+    {id: '10', columnId: '4', title: 'Keeping Up Appearances', isFavorite: false}
   ],
 
   lists: [

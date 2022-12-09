@@ -16,11 +16,26 @@
 
   .icon {
     padding-right: $base-size;
-    color: $color-warning;
     font-size: ($base-size * 2);
     vertical-align: middle;
     position: relative;
     top: - math.div($base-size, 3);
+    cursor: pointer;
+    transition: $transition;
+
+
+    &.favoriteBtn {
+      color: #5a54b9;
+      margin-right: 10px;
+    }
+
+    &.removeBtn {
+      color: $color-warning;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
   }
 
 }

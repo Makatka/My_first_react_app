@@ -3,7 +3,8 @@ import Column from "../Column/Column";
 import ColumnForm from "../ColumnForm/ColumnForm";
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router';
-import {getColumnsByList, getListById} from "../../redux/store";
+import {getListById} from "../../redux/listsRedux";
+import {getColumnsByList} from "../../redux/columnsRedux";
 import SearchForm from "../SearchForm/SearchForm";
 import {Navigate} from "react-router-dom";
 
@@ -23,7 +24,7 @@ const List = () => {
       <section className={styles.columns}>
         {columns.map(column => <Column key={column.id}{...column} />)}
       </section>
-      <ColumnForm listId={listId}/>
+      <ColumnForm listId={listId} />
     </div>
   );
 };

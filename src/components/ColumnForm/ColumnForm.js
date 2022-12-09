@@ -1,9 +1,9 @@
 import styles from './ColumnForm.module.scss';
-import { useState } from 'react';
+import {useState} from 'react';
 import Button from "../Button/Button";
 import TextInput from "../TextInput/TextInput";
-import { useDispatch } from 'react-redux';
-import {addColumn} from "../../redux/store";
+import {useDispatch} from 'react-redux';
+import {addColumn} from "../../redux/columnsRedux";
 
 const ColumnForm = props => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const ColumnForm = props => {
 
   return (
     <form className={styles.columnForm} onSubmit={handleSubmit}>
-      <span>Title:</span> <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+      <span>Title:</span> <TextInput value={title} onChange={e => setTitle(e.target.value)}/>
       <span>Icon:</span> <TextInput value={icon} onChange={e => setIcon(e.target.value)}/>
       <Button>Add column</Button>
     </form>

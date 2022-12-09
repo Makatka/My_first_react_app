@@ -52,7 +52,7 @@ const initialState = {
     }
   ],
 
-  searchTitle: '',
+  searchString: '',
 };
 
 export default initialState;
